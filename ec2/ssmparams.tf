@@ -13,7 +13,7 @@ resource "aws_ssm_parameter" "instance_arn" {
 resource "aws_ssm_parameter" "instance_key_name" {
   name  = "/vpc/${var.unique_id}-instance-key-name"
   type  = "String"
-  value = aws_instance.instance.key_name
+  value = var.instance_key_name
 }
 
 resource "aws_ssm_parameter" "instance_name" {

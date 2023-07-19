@@ -5,7 +5,7 @@ variable "unique_id"{
 variable "ami_id" {
   description = "ID of the desired AMI"
   type        = string
-  default     = "ami-0c94855ba95c71c99" 
+  default     = "ami-069d73f3235b535bd" 
 }
 
 variable "instance_type" {
@@ -26,7 +26,7 @@ variable "instance_key_name" {
   default     = "skilja" 
 }
 
-variable "iam_role_name" {
+variable "iam_profile_name" {
   description = "Name of the IAM role to attach to the EC2 instance"
   type        = string
 }

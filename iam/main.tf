@@ -17,3 +17,7 @@ resource "aws_iam_role" "instance_role" {
 EOF
 }
 
+resource "aws_iam_instance_profile" "instance_profile" {
+  name = "profile-${var.iam_role_name}"
+}
+
