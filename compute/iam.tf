@@ -1,5 +1,5 @@
 resource "aws_iam_role" "instance_role" {
-  name = var.iam_role_name
+  name = "${var.instance_identifier}-${var.iam_role_name}"
 
   assume_role_policy = <<EOF
 {
@@ -18,6 +18,6 @@ EOF
 }
 
 resource "aws_iam_instance_profile" "instance_profile" {
-  name = "profile-${var.iam_role_name}"
+  name = "profile-${var.instance_identifier}-${var.iam_role_name}"
 }
 

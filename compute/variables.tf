@@ -2,6 +2,9 @@ variable "unique_id"{
   default = "skilja-compute"
 }
 
+variable "instance_identifier"{
+}
+
 variable "ami_id" {
   description = "ID of the desired AMI"
   type        = string
@@ -17,7 +20,7 @@ variable "instance_type" {
 variable "instance_name" {
   description = "Name of the instance"
   type        = string
-  default     = "skilja instance" 
+  default     = "skilja-instance" 
 }
 
 variable "instance_key_name" {
@@ -26,14 +29,14 @@ variable "instance_key_name" {
   default     = "skilja" 
 }
 
-variable "iam_profile_name" {
-  description = "Name of the IAM role to attach to the EC2 instance"
+variable "iam_role_name" {
+  description = "Name of the IAM Role"
   type        = string
+  default     = "skilja-instance-IAM-Role"
 }
 
-variable "security_group_id" {
-  description = "ID of the security group to associate with the EC2 instance"
+variable "security_group_name" {
+  description = "Name of the Security Group"
   type        = string
+  default     = "skilja-instance-sg"
 }
-
-

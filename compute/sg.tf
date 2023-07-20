@@ -1,6 +1,6 @@
 resource "aws_security_group" "instance_security_group" {
-  name        = var.security_group_name
-  description = "Skilja app instance security group"
+  name        = "${var.instance_identifier}-${var.security_group_name}"
+  description = "Skilja ${var.instance_identifier} instance security group"
   vpc_id      = data.aws_ssm_parameter.vpc_id.value
 
   ingress {
